@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional de Paul Heredia, Ingeniero en Software especializado en Front-End y Back-End. Proyectos, habilidades y contacto." />
+    <meta name="author" content="Paul Heredia" />
+    <title>Paul Heredia | Ingeniero en Software</title>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('ph-theme') || 'dark';
+          var l = localStorage.getItem('ph-lang') || 'es';
+          document.documentElement.setAttribute('data-theme', t);
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

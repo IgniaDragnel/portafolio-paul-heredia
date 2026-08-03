@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TEMA SKELETON UI — modo oscuro (por defecto) y claro
+   Paleta inspirada en skeleton.dev (modern dark / modern light)
+   ============================================================ */
+
+/* ---------- Tema oscuro (por defecto) ---------- */
+:root,
+[data-theme="dark"] {
+  --background: #0c0e14;
+  --surface-900: #10121a;
+  --surface-800: #151823;
+  --surface-700: #1c2130;
+  --surface-600: #232a3d;
+  --surface-500: #2c3450;
+  --border: #2a3247;
+  --text: #e8ecf5;
+  --text-muted: #98a2b8;
+  --text-dim: #5f6b85;
+  --primary: #6366f1;
+  --primary-hover: #818cf8;
+  --accent: #22d3ee;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --glass: rgba(16, 18, 26, 0.85);
+  --overlay: rgba(6, 8, 13, 0.82);
+  --hero-grid: rgba(99, 102, 241, 0.06);
+  --shadow-glow: 0 0 0 1px rgba(99, 102, 241, 0.25), 0 8px 32px rgba(99, 102, 241, 0.22);
+  --terminal-bg: #0d1017;
+  --terminal-header: #12151f;
+  color-scheme: dark;
+}
+
+/* ---------- Tema claro ---------- */
+[data-theme="light"] {
+  --background: #f6f7fb;
+  --surface-900: #ffffff;
+  --surface-800: #f1f3f9;
+  --surface-700: #e8ebf4;
+  --surface-600: #dde2ee;
+  --surface-500: #cdd4e4;
+  --border: #d8deea;
+  --text: #151a28;
+  --text-muted: #4b5468;
+  --text-dim: #7a8498;
+  --primary: #4f46e5;
+  --primary-hover: #6366f1;
+  --accent: #0891b2;
+  --success: #059669;
+  --warning: #d97706;
+  --error: #dc2626;
+  --glass: rgba(255, 255, 255, 0.85);
+  --overlay: rgba(21, 26, 40, 0.55);
+  --hero-grid: rgba(79, 70, 229, 0.07);
+  --shadow-glow: 0 0 0 1px rgba(79, 70, 229, 0.2), 0 8px 32px rgba(79, 70, 229, 0.12);
+  --terminal-bg: #0d1017;
+  --terminal-header: #12151f;
+  color-scheme: light;
+}
+
+/* ---------- Base ---------- */
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-500);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ---------- Utilidades personalizadas ---------- */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.card {
+  background: var(--surface-800);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.hero-grid-bg {
+  background-image:
+    linear-gradient(var(--hero-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Scrollbar y animaciones de entrada */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-enter {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}

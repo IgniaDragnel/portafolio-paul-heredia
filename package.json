@@ -1,0 +1,22 @@
+{
+  "name": "portafolio-paul-heredia",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Portafolio profesional de Paul Heredia — React + Tailwind (estilo Skeleton UI)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}

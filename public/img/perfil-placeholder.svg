@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Foto de perfil de Paul Heredia">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121a2c"/>
+      <stop offset="1" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="url(#ring)" stroke-width="4" opacity="0.5"/>
+  <circle cx="200" cy="158" r="62" fill="#1e2a44" stroke="#2a3a5c" stroke-width="2"/>
+  <path d="M62 400c12-96 76-140 138-140s126 44 138 140z" fill="#1e2a44" stroke="#2a3a5c" stroke-width="2"/>
+  <text x="200" y="252" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#8b9bb8" text-anchor="middle">Paul Heredia</text>
+  <text x="200" y="280" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#5d6d8a" text-anchor="middle">Agrega tu foto en img/perfil.jpg</text>
+</svg>

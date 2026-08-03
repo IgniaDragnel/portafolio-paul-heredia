@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Heredia | Ingeniero en Software</title>
+  <meta name="description" content="Portafolio profesional de Paul Heredia, Ingeniero en Software especializado en Front-End y Back-End. Proyectos, habilidades y contacto.">
+  <meta name="author" content="Paul Heredia">
+  <meta property="og:title" content="Paul Heredia | Ingeniero en Software">
+  <meta property="og:description" content="Portafolio profesional de Paul Heredia, desarrollador Full Stack.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* Aplicar tema e idioma guardados antes del render (evita parpadeo) */
+    (function () {
+      try {
+        var t = localStorage.getItem('ph-theme') || 'dark';
+        var l = localStorage.getItem('ph-lang') || 'es';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.lang = l;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="logo">&lt;PH /&gt;</a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link active" data-i18n="nav.inicio">Inicio</a>
+        <a href="#sobre-mi" class="nav-link" data-i18n="nav.sobre">Sobre mí</a>
+        <a href="#experiencia" class="nav-link" data-i18n="nav.exp">Experiencia</a>
+        <a href="#habilidades" class="nav-link" data-i18n="nav.hab">Habilidades</a>
+        <a href="#proyectos" class="nav-link" data-i18n="nav.proy">Proyectos</a>
+        <a href="#contacto" class="nav-link" data-i18n="nav.cont">Contacto</a>
+        <a href="https://github.com/IgniaDragnel" target="_blank" rel="noopener" class="btn btn-primary btn-nav">GitHub</a>
+      </nav>
+      <div class="nav-controls">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="icon-btn lang-btn" id="langToggle" aria-label="Cambiar idioma" title="Cambiar idioma">
+          <span id="langLabel">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <p class="hero-greeting" data-i18n="hero.greeting">&lt;Hola mundo! 👋 Soy&gt;</p>
+          <h1 class="hero-title">
+            <span class="gradient-text">Paul Heredia</span>
+          </h1>
+          <h2 class="hero-role">
+            <span data-i18n="hero.role">Ingeniero en Software</span> <span class="accent-bar">|</span> <span id="typed" class="typed-text"></span><span class="cursor">_</span>
+          </h2>
+          <p class="hero-desc" data-i18n="hero.desc">
+            Desarrollador Full Stack especializado en Front-End y Back-End.
+            Creo aplicaciones web y de escritorio funcionales, seguras y con
+            interfaces limpias. Estudiante en la ESPE 🚀
+          </p>
+          <p class="hero-location">📍 Quito, Ecuador</p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary" data-i18n="hero.btn1">Ver mis proyectos</a>
+            <a href="#contacto" class="btn btn-outline" data-i18n="hero.btn2">Contáctame</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/IgniaDragnel" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://wa.me/593984811855" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/paul-heredia-9244191b1/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=paulheredia02@gmail.com" target="_blank" rel="noopener" class="email-link" aria-label="Correo electrónico">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"/><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-photo">
+            <img src="img/Paul_Heredia.jpeg" alt="Paul Heredia — Foto de perfil" onerror="this.onerror=null;this.src='img/perfil-placeholder.svg'">
+          </div>
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">paul@portfolio: ~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-prompt">➜</span> <span class="t-cmd">whoami</span></p>
+              <p class="t-out" data-i18n="term.whoami">Paul Heredia — Ingeniero en Software</p>
+              <p><span class="t-prompt">➜</span> <span class="t-cmd">cat lenguajes.txt</span></p>
+              <p class="t-out">{ PHP, Java, C#, JavaScript, Dart, SQL }</p>
+              <p><span class="t-prompt">➜</span> <span class="t-cmd">git status</span></p>
+              <p class="t-out t-green" data-i18n="term.status">✓ disponible para nuevos proyectos</p>
+              <p><span class="t-prompt">➜</span> <span class="t-cursor">▊</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#sobre-mi" class="scroll-indicator" aria-label="Bajar a Sobre mí">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag" data-i18n="sec.sobre">&lt;01 / sobre-mi&gt;</p>
+          <h2 class="section-title" data-i18n="sobre.titulo">Sobre mí</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <h3 data-i18n="sobre.q1">👨‍💻 ¿Quién soy?</h3>
+            <p data-i18n="sobre.p1" data-i18n-html="true">
+              Soy <strong>Paul Heredia</strong>, estudiante de Ingeniería en Software en la
+              <strong>ESPE</strong> y desarrollador Full Stack con <strong>más de 2 años de
+              experiencia</strong> construyendo aplicaciones de <strong>Front-End</strong> y
+              <strong>Back-End</strong> para empresas como EQR y Kaizen Software.
+            </p>
+            <p data-i18n="sobre.p2">
+              Me apasiona transformar ideas en soluciones reales: desde sistemas de
+              autenticación y registro de usuarios, hasta aplicaciones de escritorio
+              para optimizar procesos cotidianos. Disfruto trabajar con bases de datos,
+              APIs y construir interfaces limpias y funcionales.
+            </p>
+            <p data-i18n="sobre.p3">
+              Siempre estoy aprendiendo nuevas tecnologías y buscando retos que me
+              permitan crecer como profesional.
+            </p>
+          </div>
+          <div class="about-card reveal">
+            <h3 data-i18n="sobre.q2">🎯 ¿Qué hago?</h3>
+            <ul class="about-list">
+              <li><span class="check">✓</span><span data-i18n="sobre.i1">Desarrollo de aplicaciones web Full Stack (Front-End y Back-End)</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i2">Diseño e implementación de APIs REST seguras y escalables, así como integración con servicios y APIs de terceros</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i3">Desarrollo de sistemas empresariales para Recursos Humanos, Administración, Compras, Mantenimiento y Soporte</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i4">Implementación de autenticación, gestión de usuarios, roles y permisos</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i5">Diseño y administración de bases de datos relacionales y NoSQL</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i6">Desarrollo de aplicaciones con comunicación en tiempo real mediante WebSockets y notificaciones push</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i7">Automatización e integración de procesos mediante servicios como Firebase Cloud Messaging, WhatsApp Business API y correo electrónico</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i8">Desarrollo de interfaces web modernas, responsivas y optimizadas para una mejor experiencia de usuario</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i9">Desarrollo de aplicaciones móviles multiplataforma</span></li>
+              <li><span class="check">✓</span><span data-i18n="sobre.i10">Control de versiones, trabajo colaborativo y despliegue de aplicaciones</span></li>
+            </ul>
+            <div class="about-badges">
+              <span class="badge">📍 Quito, Ecuador</span>
+              <span class="badge">🎓 ESPE</span>
+              <span class="badge">💻 Full Stack</span>
+              <span class="badge">💼 +3 años exp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag" data-i18n="sec.exp">&lt;02 / experiencia&gt;</p>
+          <h2 class="section-title" data-i18n="exp.titulo">Experiencia laboral</h2>
+        </div>
+        <div class="timeline" id="timelineContainer"></div>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section class="section section-alt" id="habilidades">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag" data-i18n="sec.hab">&lt;03 / habilidades&gt;</p>
+          <h2 class="section-title" data-i18n="hab.titulo">Habilidades técnicas</h2>
+          <p class="section-sub" data-i18n="hab.sub">Las herramientas y lenguajes que uso para dar vida a las ideas.</p>
+        </div>
+        <div class="skill-tabs reveal" id="skillTabs" role="tablist" aria-label="Categorías de habilidades"></div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag" data-i18n="sec.proy">&lt;04 / proyectos&gt;</p>
+          <h2 class="section-title" data-i18n="proy.titulo">Proyectos destacados</h2>
+          <p class="section-sub" data-i18n="proy.sub" data-i18n-html="true">Sistemas reales que he construido, disponibles en mi <a href="https://github.com/IgniaDragnel?tab=repositories" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+        <div class="projects-footer reveal">
+          <a href="https://github.com/IgniaDragnel?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="proy.ver">
+            Ver todos en GitHub →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section section-alt" id="contacto">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag" data-i18n="sec.cont">&lt;05 / contacto&gt;</p>
+          <h2 class="section-title" data-i18n="cont.titulo">¿Trabajamos juntos?</h2>
+          <p class="section-sub" data-i18n="cont.sub">
+            ¿Tienes un proyecto en mente, una oportunidad laboral o quieres saludar?
+            Mi bandeja de entrada está siempre abierta. 🚀
+          </p>
+        </div>
+        <div class="contact-grid reveal">
+          <a href="https://wa.me/593984811855" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>0984811855</p>
+          </a>
+          <a href="https://github.com/IgniaDragnel?tab=repositories" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </div>
+            <h3 data-i18n="cont.website">Sitio web</h3>
+            <p>github.com/IgniaDragnel</p>
+          </a>
+          <a href="https://www.linkedin.com/in/paul-heredia-9244191b1/" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </div>
+            <h3 data-i18n="cont.linkedin">LinkedIn</h3>
+            <p>in/paul-heredia-9244191b1</p>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=paulheredia02@gmail.com" target="_blank" rel="noopener" class="contact-card contact-card-email email-link" id="contactEmail">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"/><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"/></svg>
+            </div>
+            <h3 data-i18n="cont.email">Correo</h3>
+            <p>paulheredia02@gmail.com</p>
+          </a>
+          <span class="contact-card contact-card-location">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            </div>
+            <h3 data-i18n="cont.ubic">Ubicación</h3>
+            <p>Quito, Ecuador</p>
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== MODAL PROYECTO ===================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar detalles">✕</button>
+      <div class="modal-split">
+        <div class="modal-media">
+          <img class="modal-img" id="modalImg" src="" alt="">
+          <button class="modal-nav prev" id="modalPrev" aria-label="Imagen anterior">‹</button>
+          <button class="modal-nav next" id="modalNext" aria-label="Siguiente imagen">›</button>
+          <span class="modal-counter" id="modalCounter"></span>
+          <a id="modalGithub" class="modal-github-link" target="_blank" rel="noopener" aria-label="Ver código en GitHub" title="Ver código en GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        </div>
+        <div class="modal-body">
+          <div class="project-tags" id="modalTags"></div>
+          <h3 id="modalTitle"></h3>
+          <p class="modal-desc" id="modalDesc"></p>
+          <ul class="modal-highlights" id="modalHighlights"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="footer-code"><span class="t-prompt">➜</span> <span data-i18n="foot.msg">echo "Gracias por visitar mi portafolio"</span></p>
+      <p class="footer-copy">© <span id="year">2026</span> Paul Heredia · <span data-i18n="foot.copy">Hecho con 💙 y código</span></p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <!-- Toast de notificación -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
