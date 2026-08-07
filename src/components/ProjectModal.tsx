@@ -1,27 +1,31 @@
 import { useEffect, useState } from 'react';
-import { useApp } from '../context/AppContext';
-import { i18n, tagIcon } from '../data/i18n';
+import type { MouseEvent } from 'react';
+import { tagIcon } from '../data/i18n';
+import type { Project } from '../data/i18n';
 
-export default function ProjectModal({ project, onClose }) {
-  const { lang } = useApp();
-  const t = i18n[lang];
+interface ProjectModalProps {
+  project: Project;
+  onClose: () => void;
+}
+
+export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [index, setIndex] = useState(0);
 
-  const images = project?.images || [];
+  const images = project.images || [];
   const multi = images.length > 1;
 
-  const prev = (e) => {
+  const prev = (e: MouseEvent) => {
     e.stopPropagation();
     setIndex((i) => (i - 1 + images.length) % images.length);
   };
-  const next = (e) => {
+  const next = (e: MouseEvent) => {
     e.stopPropagation();
     setIndex((i) => (i + 1) % images.length);
   };
 
   // Cerrar con Escape y navegar con flechas
   useEffect(() => {
-    const onKey = (e) => {
+    const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowLeft') setIndex((i) => (i - 1 + images.length) % images.length);
       if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % images.length);
@@ -38,7 +42,7 @@ export default function ProjectModal({ project, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-[var(--overlay)] p-5 backdrop-blur-md"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-5 backdrop-blur-md"
       style={{ background: 'var(--overlay)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >

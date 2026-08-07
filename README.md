@@ -2,11 +2,12 @@
 
 Portafolio profesional de **Paul Heredia**, Ingeniero en Software y desarrollador Full Stack (Front-End & Back-End), estudiante en la ESPE 🇪🇨.
 
-> **v2.0** — Migrado de HTML/CSS/JS estático a **React + Vite** con estilos **Tailwind CSS** (estética Skeleton UI).
+> **v2.1** — Migrado de HTML/CSS/JS estático a **React + TypeScript + Vite** con estilos **Tailwind CSS** (estética Skeleton UI).
 
 ## 🛠️ Stack
 
 - ⚛️ **React 18** + **Vite 6**
+- 🟦 **TypeScript** (tipado estricto, archivos `.tsx`/`.ts`)
 - 🎨 **Tailwind CSS v4** con sistema de temas claro/oscuro (paleta Skeleton UI)
 - 🌐 i18n ES/EN con `localStorage`
 - 📱 100% responsive
@@ -16,6 +17,7 @@ Portafolio profesional de **Paul Heredia**, Ingeniero en Software y desarrollado
 - 🌙/☀️ Toggle de tema claro-oscuro (guardado en localStorage)
 - 🌐 Toggle de idioma Español/Inglés (todo el sitio traducido)
 - 📸 Foto de perfil + terminal decorativa animada
+- ⬇️ Botón **Descargar CV** (PDF en `public/CV-Paul_Heredia.pdf`)
 - 💼 Línea de tiempo de experiencia laboral (EQR, Kaizen, Royal Flowers)
 - 🏷️ Habilidades con pestañas por categoría y logos oficiales
 - 🗂️ 6 proyectos con capturas reales y **modal con galería** (flechas ‹ ›, contador, teclas ← →)
@@ -32,23 +34,23 @@ portafolio-paul-heredia/
 │   └── img/                # Fotos y capturas de proyectos
 │       └── proyectos/<proyecto>/
 ├── src/
-│   ├── main.jsx            # Punto de entrada
-│   ├── App.jsx             # Composición de secciones
+│   ├── main.tsx            # Punto de entrada
+│   ├── App.tsx             # Composición de secciones
 │   ├── index.css           # Temas Skeleton UI (dark/light) + utilidades
 │   ├── context/
-│   │   └── AppContext.jsx  # Estado global (tema, idioma, menú)
+│   │   └── AppContext.tsx  # Estado global (tema, idioma, menú)
 │   ├── data/
-│   │   └── i18n.js         # Traducciones ES/EN + datos (proyectos, skills, experiencia)
+│   │   └── i18n.ts         # Traducciones ES/EN tipadas + datos
 │   └── components/
-│       ├── Navbar.jsx      # Navegación + toggles tema/idioma
-│       ├── Hero.jsx        # Foto, terminal, redes
-│       ├── About.jsx       # Sobre mí (10 puntos)
-│       ├── Experience.jsx  # Timeline laboral
-│       ├── Skills.jsx      # Pestañas + tarjetas
-│       ├── Projects.jsx    # Tarjetas de proyectos
-│       ├── ProjectModal.jsx# Modal con galería
-│       ├── Contact.jsx     # Tarjetas de contacto + toast
-│       └── Footer.jsx
+│       ├── Navbar.tsx      # Navegación + toggles tema/idioma
+│       ├── Hero.tsx        # Foto, terminal, redes, botón CV
+│       ├── About.tsx       # Sobre mí (10 puntos)
+│       ├── Experience.tsx  # Timeline laboral
+│       ├── Skills.tsx      # Pestañas + tarjetas
+│       ├── Projects.tsx    # Tarjetas de proyectos
+│       ├── ProjectModal.tsx# Modal con galería
+│       ├── Contact.tsx     # Tarjetas de contacto + toast
+│       └── Footer.tsx
 └── legacy-html/            # Versión HTML original (respaldo)
 ```
 
@@ -79,11 +81,12 @@ Luego activa **GitHub Pages** en *Settings → Pages* (branch `main`, carpeta `/
 
 | ¿Qué quieres cambiar? | ¿Dónde? |
 |---|---|
-| Textos y traducciones | `src/data/i18n.js` |
-| Proyectos (descripciones, imágenes, enlaces) | `src/data/i18n.js` → `projects` |
-| Habilidades | `src/data/i18n.js` → `skills` |
-| Experiencia | `src/data/i18n.js` → `exp.items` |
-| Contactos (teléfono, correo, redes) | `src/data/i18n.js` → `CONTACT` |
+| Textos y traducciones | `src/data/i18n.ts` |
+| Proyectos (descripciones, imágenes, enlaces) | `src/data/i18n.ts` → `projects` |
+| Habilidades | `src/data/i18n.ts` → `skills` |
+| Experiencia | `src/data/i18n.ts` → `exp.items` |
+| Contactos (teléfono, correo, redes) | `src/data/i18n.ts` → `CONTACT` |
+| CV (archivo PDF) | `public/CV-Paul_Heredia.pdf` |
 | Colores del tema | `src/index.css` → variables CSS |
 | Capturas de proyectos | `public/img/proyectos/<proyecto>/` |
 

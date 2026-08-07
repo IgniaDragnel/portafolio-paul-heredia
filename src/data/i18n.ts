@@ -1,8 +1,118 @@
 // ============================================================
-// Datos del portafolio — i18n ES/EN
+// Datos del portafolio — i18n ES/EN (TypeScript)
 // ============================================================
 
-export const techIcons = {
+export type Lang = 'es' | 'en';
+
+export interface TagIcon {
+  img?: string;
+  emoji?: string;
+  text?: string;
+  label: string;
+}
+
+export interface Skill {
+  name: string;
+  cat: 'lenguajes' | 'frontend' | 'backend' | 'movil' | 'bases' | 'herramientas';
+  img?: string;
+  emoji?: string;
+  invert?: boolean;
+}
+
+export interface Project {
+  title: string;
+  short: string;
+  desc: string;
+  images: string[];
+  tags: string[];
+  github: string;
+  highlights: string[];
+}
+
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  date: string;
+  items: string[];
+  tags: string[];
+}
+
+export interface HeroData {
+  greeting: string;
+  role: string;
+  desc: string;
+  btn1: string;
+  btn2: string;
+  btnCv: string;
+  roles: string[];
+}
+
+export interface TermData {
+  whoami: string;
+  status: string;
+}
+
+export interface SobreData {
+  titulo: string;
+  q1: string;
+  p1: string;
+  p2: string;
+  p3: string;
+  q2: string;
+  items: string[];
+}
+
+export interface ExpData {
+  titulo: string;
+  items: ExperienceItem[];
+}
+
+export interface HabData {
+  titulo: string;
+  sub: string;
+  tabs: string[];
+}
+
+export interface ProyData {
+  titulo: string;
+  sub: string;
+  ver: string;
+  verDetalles: string;
+}
+
+export interface ContData {
+  titulo: string;
+  sub: string;
+  whatsapp: string;
+  website: string;
+  linkedin: string;
+  email: string;
+  ubic: string;
+  copied: string;
+}
+
+export interface FootData {
+  msg: string;
+  copy: string;
+}
+
+export interface Translation {
+  nav: string[];
+  hero: HeroData;
+  term: TermData;
+  sec: string[];
+  sobre: SobreData;
+  exp: ExpData;
+  hab: HabData;
+  skills: Skill[];
+  proy: ProyData;
+  projects: Project[];
+  cont: ContData;
+  foot: FootData;
+  title: string;
+}
+
+export const techIcons: Record<string, string> = {
   Dart: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg',
   MongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
   'C#': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg',
@@ -19,7 +129,7 @@ export const techIcons = {
   Flutter: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg'
 };
 
-export const techEmojis = {
+export const techEmojis: Record<string, string> = {
   'API REST': '🔗',
   Authentication: '🔐',
   Autenticación: '🔐',
@@ -52,15 +162,15 @@ export const techEmojis = {
 };
 
 // Icono SVG para tecnologías con logo devicon (o emoji si no hay)
-export function tagIcon(name) {
+export function tagIcon(name: string): TagIcon {
   const img = techIcons[name];
   if (img) return { img, label: name };
   const emoji = techEmojis[name];
   if (emoji) return { emoji, label: name };
-  return { text: name };
+  return { text: name, label: name };
 }
 
-export const i18n = {
+export const i18n: Record<Lang, Translation> = {
   es: {
     nav: ['Inicio', 'Sobre mí', 'Experiencia', 'Habilidades', 'Proyectos', 'Contacto'],
     hero: {
@@ -69,6 +179,7 @@ export const i18n = {
       desc: 'Desarrollador Full Stack especializado en Front-End y Back-End. Creo aplicaciones web, móviles y de escritorio funcionales, seguras y con interfaces limpias. Estudiante en la ESPE 🚀',
       btn1: 'Ver mis proyectos',
       btn2: 'Contáctame',
+      btnCv: 'Descargar CV',
       roles: ['Desarrollador Full Stack', 'Back-End Developer', 'Front-End Developer', 'Estudiante ESPE 🎓']
     },
     term: {
@@ -259,6 +370,7 @@ export const i18n = {
       desc: 'Full Stack developer specialized in Front-End and Back-End. I build functional, secure web, mobile and desktop applications with clean interfaces. Student at ESPE 🚀',
       btn1: 'See my projects',
       btn2: 'Contact me',
+      btnCv: 'Download CV',
       roles: ['Full Stack Developer', 'Back-End Developer', 'Front-End Developer', 'ESPE Student 🎓']
     },
     term: {
@@ -454,10 +566,11 @@ export const CONTACT = {
   emailCompose: 'https://mail.google.com/mail/?view=cm&fs=1&to=paulheredia02@gmail.com',
   location: 'Quito, Ecuador',
   photo: 'img/Paul_Heredia.jpeg',
-  photoFallback: 'img/perfil-placeholder.svg'
-};
+  photoFallback: 'img/perfil-placeholder.svg',
+  cv: 'CV-Paul_Heredia.pdf'
+} as const;
 
 export const PROFILE = {
   name: 'Paul Heredia',
   location: '📍 Quito, Ecuador'
-};
+} as const;

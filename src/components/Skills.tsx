@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { i18n } from '../data/i18n';
+import type { Skill } from '../data/i18n';
 
-const CATS = ['todo', 'lenguajes', 'frontend', 'backend', 'movil', 'bases', 'herramientas'];
+type CatFilter = Skill['cat'] | 'todo';
+
+const CATS: CatFilter[] = ['todo', 'lenguajes', 'frontend', 'backend', 'movil', 'bases', 'herramientas'];
 
 export default function Skills() {
   const { lang } = useApp();
   const t = i18n[lang];
-  const [active, setActive] = useState('todo');
+  const [active, setActive] = useState<Skill['cat'] | 'todo'>('todo');
 
   const list = active === 'todo' ? t.skills : t.skills.filter((s) => s.cat === active);
 
@@ -25,7 +28,7 @@ export default function Skills() {
           {t.hab.tabs.map((label, i) => (
             <button
               key={label}
-              onClick={() => setActive(CATS[i])}
+              onClick={() => setActive(CATS[i] ?? 'todo')}
               className={`rounded-full px-5 py-2 font-mono text-sm transition-all ${
                 active === CATS[i]
                   ? 'bg-gradient-to-r from-[#10b981] to-[#34d399] font-bold text-[#06251b] shadow-[0_6px_20px_rgba(16,185,129,0.35)]'

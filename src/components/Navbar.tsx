@@ -8,9 +8,11 @@ export default function Navbar() {
   const { lang, theme, menuOpen, setMenuOpen, toggleTheme, toggleLang } = useApp();
   const t = i18n[lang];
 
-  // Cerrar menú al hacer click en un enlace
+  // Cerrar menú al pasar a escritorio
   useEffect(() => {
-    const onResize = () => window.innerWidth > 768 && setMenuOpen(false);
+    const onResize = () => {
+      if (window.innerWidth > 768) setMenuOpen(false);
+    };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, [setMenuOpen]);

@@ -1,9 +1,17 @@
 import { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { i18n, tagIcon } from '../data/i18n';
+import type { Project } from '../data/i18n';
+import type { Translation } from '../data/i18n';
 import ProjectModal from './ProjectModal';
 
-function ProjectCard({ project, onOpen, t }) {
+interface ProjectCardProps {
+  project: Project;
+  onOpen: (p: Project) => void;
+  t: Translation;
+}
+
+function ProjectCard({ project, onOpen, t }: ProjectCardProps) {
   return (
     <article
       role="button"
@@ -56,7 +64,7 @@ function ProjectCard({ project, onOpen, t }) {
 export default function Projects() {
   const { lang } = useApp();
   const t = i18n[lang];
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   return (
     <section id="proyectos" className="py-24">

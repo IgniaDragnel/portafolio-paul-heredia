@@ -1,7 +1,7 @@
 import { useApp } from '../context/AppContext';
 import { i18n, tagIcon } from '../data/i18n';
 
-function Tag({ name }) {
+function Tag({ name }: { name: string }) {
   const icon = tagIcon(name);
   if (icon.img) {
     return (
