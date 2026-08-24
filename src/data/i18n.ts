@@ -158,7 +158,9 @@ export const techEmojis: Record<string, string> = {
   Support: '🛠️',
   'Soporte técnico': '🛠️',
   NetBeans: '🛠️',
-  XAMPP: '🚀'
+  XAMPP: '🚀',
+  WordPress: '🧩',
+  'E-commerce': '🛒'
 };
 
 // Icono SVG para tecnologías con logo devicon (o emoji si no hay)
@@ -344,6 +346,15 @@ export const i18n: Record<Lang, Translation> = {
         tags: ['PHP', 'Sesiones', 'Autenticación'],
         github: 'https://github.com/IgniaDragnel/Login_Registro',
         highlights: ['Registro de nuevos usuarios', 'Inicio de sesión con sesiones PHP', 'Almacenamiento de credenciales', 'Interfaz sencilla y funcional']
+      },
+      {
+        title: 'E-commerce WordPress + React',
+        short: 'Tienda online con WordPress headless y React',
+        desc: 'E-commerce completo con WordPress como backend (headless CMS) y SPA React como frontend desacoplado. Tienda dinámica con filtros, carrito persistente, checkout con creación de pedidos, panel de cuenta de usuario y seguimiento de pedidos con mapa interactivo.',
+        images: ['img/proyectos/ecommers-wordpress/ecommers-wordpress-1.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-2.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-3.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-4.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-5.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-6.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-7.png'],
+        tags: ['PHP', 'React', 'Vite', 'API REST', 'WordPress', 'E-commerce'],
+        github: 'https://github.com/IgniaDragnel/Ecommers_Worpress',
+        highlights: ['Tienda dinámica con filtros por categoría, ofertas y ordenamiento por precio', 'Carrito persistente con sincronización al backend', 'Checkout con creación de pedidos', 'Mi Cuenta: perfil editable, estadísticas y pedidos', 'Seguimiento de pedidos con mapa interactivo (Leaflet + OpenStreetMap)', 'Tema oscuro/claro e idioma ES/EN']
       }
     ],
     cont: {
@@ -536,6 +547,15 @@ export const i18n: Record<Lang, Translation> = {
         tags: ['PHP', 'Sessions', 'Authentication'],
         github: 'https://github.com/IgniaDragnel/Login_Registro',
         highlights: ['New user registration', 'Login with PHP sessions', 'Credential storage', 'Simple and functional interface']
+      },
+      {
+        title: 'E-commerce WordPress + React',
+        short: 'Online store with headless WordPress and React',
+        desc: 'Complete e-commerce with WordPress as backend (headless CMS) and a decoupled React SPA as frontend. Dynamic store with filters, persistent cart, checkout with order creation, user account panel and order tracking with an interactive map.',
+        images: ['img/proyectos/ecommers-wordpress/ecommers-wordpress-1.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-2.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-3.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-4.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-5.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-6.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-7.png'],
+        tags: ['PHP', 'React', 'Vite', 'API REST', 'WordPress', 'E-commerce'],
+        github: 'https://github.com/IgniaDragnel/Ecommers_Worpress',
+        highlights: ['Dynamic store with category filters, deals and price sorting', 'Persistent cart synced with the backend', 'Checkout with order creation', 'My Account: editable profile, stats and orders', 'Order tracking with interactive map (Leaflet + OpenStreetMap)', 'Dark/light theme and ES/EN language']
       }
     ],
     cont: {
