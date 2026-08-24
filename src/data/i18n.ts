@@ -126,7 +126,8 @@ export const techIcons: Record<string, string> = {
   'React Native': 'img/icons/react-original.svg',
   Vite: 'img/icons/vite-original.svg',
   Firebase: 'img/icons/firebase-original.svg',
-  Flutter: 'img/icons/flutter-original.svg'
+  Flutter: 'img/icons/flutter-original.svg',
+  WordPress: 'img/icons/wordpress-original.svg'
 };
 
 export const techEmojis: Record<string, string> = {
@@ -269,6 +270,7 @@ export const i18n: Record<Lang, Translation> = {
       { name: 'CSS', cat: 'frontend', img: 'img/icons/css3-original.svg' },
       { name: 'Laravel', cat: 'backend', img: 'img/icons/laravel-original.svg' },
       { name: 'Node.js', cat: 'backend', img: 'img/icons/nodejs-original.svg' },
+      { name: 'WordPress', cat: 'backend', img: 'img/icons/wordpress-original.svg' },
       { name: 'API REST', cat: 'backend', emoji: '🔗' },
       { name: 'Autenticación', cat: 'backend', emoji: '🔐' },
       { name: 'CRUD', cat: 'backend', emoji: '📝' },
@@ -470,6 +472,7 @@ export const i18n: Record<Lang, Translation> = {
       { name: 'CSS', cat: 'frontend', img: 'img/icons/css3-original.svg' },
       { name: 'Laravel', cat: 'backend', img: 'img/icons/laravel-original.svg' },
       { name: 'Node.js', cat: 'backend', img: 'img/icons/nodejs-original.svg' },
+      { name: 'WordPress', cat: 'backend', img: 'img/icons/wordpress-original.svg' },
       { name: 'API REST', cat: 'backend', emoji: '🔗' },
       { name: 'Authentication', cat: 'backend', emoji: '🔐' },
       { name: 'CRUD', cat: 'backend', emoji: '📝' },
