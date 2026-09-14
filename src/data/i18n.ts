@@ -127,7 +127,14 @@ export const techIcons: Record<string, string> = {
   Vite: 'img/icons/vite-original.svg',
   Firebase: 'img/icons/firebase-original.svg',
   Flutter: 'img/icons/flutter-original.svg',
-  WordPress: 'img/icons/wordpress-original.svg'
+  WordPress: 'img/icons/wordpress-original.svg',
+  'Tailwind CSS': 'img/icons/tailwindcss-original.svg',
+  Express: 'img/icons/express-original.svg',
+  TypeScript: 'img/icons/typescript-original.svg',
+  'Node.js': 'img/icons/nodejs-original.svg',
+  Python: 'img/icons/python-original.svg',
+  TensorFlow: 'img/icons/tensorflow-original.svg',
+  Keras: 'img/icons/keras-original.svg'
 };
 
 export const techEmojis: Record<string, string> = {
@@ -161,7 +168,18 @@ export const techEmojis: Record<string, string> = {
   NetBeans: '🛠️',
   XAMPP: '🚀',
   WordPress: '🧩',
-  'E-commerce': '🛒'
+  'E-commerce': '🛒',
+  Salud: '🩺',
+  Health: '🩺',
+  'Mapa interactivo': '🗺️',
+  'Interactive map': '🗺️',
+  'Modo oscuro': '🌙',
+  'Dark mode': '🌙',
+  Responsive: '📱',
+  IA: '🤖',
+  AI: '🤖',
+  CNN: '🧠',
+  'Machine Learning': '🤖'
 };
 
 // Icono SVG para tecnologías con logo devicon (o emoji si no hay)
@@ -296,6 +314,33 @@ export const i18n: Record<Lang, Translation> = {
     },
     projects: [
       {
+        title: 'VitaDomicilio — Médico a Domicilio',
+        short: 'Sitio web para servicio de médico a domicilio',
+        desc: 'Sitio web para un servicio de médico a domicilio en Quito y Valles. Presenta el catálogo de servicios y especialidades médicas, la zona de cobertura con un mapa interactivo y un formulario de contacto. Frontend en React 18 con TypeScript y Tailwind CSS, componentes Skeleton para la carga de datos y API REST propia en Node.js + Express.',
+        images: ['img/proyectos/vitadomicilio/vitadomicilio-1.png', 'img/proyectos/vitadomicilio/vitadomicilio-2.png', 'img/proyectos/vitadomicilio/vitadomicilio-3.png', 'img/proyectos/vitadomicilio/vitadomicilio-4.png', 'img/proyectos/vitadomicilio/vitadomicilio-5.png', 'img/proyectos/vitadomicilio/vitadomicilio-6.png', 'img/proyectos/vitadomicilio/vitadomicilio-7.png', 'img/proyectos/vitadomicilio/vitadomicilio-8.png'],
+        tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'API REST'],
+        github: '',
+        highlights: ['Catálogo de servicios y especialidades médicas', 'Zona de cobertura con mapa interactivo', 'Formulario de contacto para solicitud de visitas', 'Páginas de detalle de servicios y secciones legales', 'Tema oscuro/claro e idioma ES/EN', 'APIs REST en Node.js + Express con componentes Skeleton de carga']
+      },
+      {
+        title: 'E-commerce WordPress + React',
+        short: 'Tienda online con WordPress headless y React',
+        desc: 'E-commerce completo con WordPress como backend (headless CMS) y SPA React como frontend desacoplado. Tienda dinámica con filtros, carrito persistente, checkout con creación de pedidos, panel de cuenta de usuario y seguimiento de pedidos con mapa interactivo.',
+        images: ['img/proyectos/ecommers-wordpress/ecommers-wordpress-1.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-2.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-3.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-4.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-5.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-6.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-7.png'],
+        tags: ['PHP', 'React', 'Vite', 'API REST', 'WordPress', 'E-commerce'],
+        github: 'https://github.com/IgniaDragnel/Ecommers_Worpress',
+        highlights: ['Tienda dinámica con filtros por categoría, ofertas y ordenamiento por precio', 'Carrito persistente con sincronización al backend', 'Checkout con creación de pedidos', 'Mi Cuenta: perfil editable, estadísticas y pedidos', 'Seguimiento de pedidos con mapa interactivo (Leaflet + OpenStreetMap)', 'Tema oscuro/claro e idioma ES/EN']
+      },
+      {
+        title: 'Reconocimiento de Imágenes',
+        short: 'Clasificador de imágenes con IA',
+        desc: 'Aplicación de escritorio para el reconocimiento y clasificación de imágenes con inteligencia artificial. Permite cargar una imagen, ejecutar un modelo de red neuronal para identificar su contenido (gato, perro, pájaro) y mostrar el porcentaje de confianza de cada predicción. Incluye opciones para entrenar el modelo y guardarlo.',
+        images: ['img/proyectos/reconocimiento-imagenes/reconocimiento-1.png', 'img/proyectos/reconocimiento-imagenes/reconocimiento-2.png', 'img/proyectos/reconocimiento-imagenes/reconocimiento-3.png'],
+        tags: ['Python', 'TensorFlow', 'Keras', 'CNN', 'IA', 'Escritorio'],
+        github: '',
+        highlights: ['Clasificación de imágenes con red neuronal (gato, perro, pájaro)', 'Porcentaje de confianza por categoría', 'Carga de imágenes y predicción en tiempo real', 'Entrenamiento y guardado del modelo', 'Interfaz de escritorio en Python']
+      },
+      {
         title: 'Login & Registro MongoDB',
         short: 'Autenticación con API local y MongoDB',
         desc: 'Sistema completo de login y registro de usuarios desarrollado en Dart, que consume una API local para registrar y autenticar usuarios almacenando la información en una base de datos MongoDB.',
@@ -303,6 +348,24 @@ export const i18n: Record<Lang, Translation> = {
         tags: ['Dart', 'MongoDB', 'API REST', 'Autenticación'],
         github: 'https://github.com/IgniaDragnel/Login_Registro_MongoDB',
         highlights: ['Registro de nuevos usuarios', 'Inicio de sesión con validación de credenciales', 'Consumo de API REST local', 'Persistencia de datos en MongoDB', 'Interfaz limpia y funcional']
+      },
+      {
+        title: 'Registro de Estudiantes',
+        short: 'CRUD de estudiantes con MySQL',
+        desc: 'Sistema de registro de estudiantes desarrollado en Java con conexión a una base de datos MySQL. Permite almacenar, consultar y gestionar la información de los estudiantes de forma ordenada y confiable.',
+        images: ['img/proyectos/registro-estudiantes/registro-estudiantes-1.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-2.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-3.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-4.jpg'],
+        tags: ['Java', 'MySQL', 'CRUD'],
+        github: 'https://github.com/IgniaDragnel/Registro_Estudiantes',
+        highlights: ['Registro y gestión de estudiantes', 'Conexión a base de datos MySQL', 'Consultas y manipulación de datos (CRUD)', 'Aplicación desarrollada en Java']
+      },
+      {
+        title: 'Login & Registro (PHP)',
+        short: 'Login y registro con sesiones PHP',
+        desc: 'Sistema de login y registro de usuarios desarrollado en PHP con gestión de sesiones. Permite a los usuarios crear sus cuentas e iniciar sesión de forma segura, manteniendo su estado de autenticación durante la navegación.',
+        images: ['img/proyectos/login-php/login-php-1.jpg', 'img/proyectos/login-php/login-php-2.jpg', 'img/proyectos/login-php/login-php-3.jpg'],
+        tags: ['PHP', 'Sesiones', 'Autenticación'],
+        github: 'https://github.com/IgniaDragnel/Login_Registro',
+        highlights: ['Registro de nuevos usuarios', 'Inicio de sesión con sesiones PHP', 'Almacenamiento de credenciales', 'Interfaz sencilla y funcional']
       },
       {
         title: 'Roles de Usuario (C#)',
@@ -330,33 +393,6 @@ export const i18n: Record<Lang, Translation> = {
         tags: ['PHP', 'HTML', 'Validaciones', 'Formularios'],
         github: 'https://github.com/IgniaDragnel/Formulario_Registro',
         highlights: ['Validación de campos requeridos', 'Control de formato (correo, contraseña)', 'Diseño con HTML y CSS', 'Lógica de validación en PHP']
-      },
-      {
-        title: 'Registro de Estudiantes',
-        short: 'CRUD de estudiantes con MySQL',
-        desc: 'Sistema de registro de estudiantes desarrollado en Java con conexión a una base de datos MySQL. Permite almacenar, consultar y gestionar la información de los estudiantes de forma ordenada y confiable.',
-        images: ['img/proyectos/registro-estudiantes/registro-estudiantes-1.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-2.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-3.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-4.jpg'],
-        tags: ['Java', 'MySQL', 'CRUD'],
-        github: 'https://github.com/IgniaDragnel/Registro_Estudiantes',
-        highlights: ['Registro y gestión de estudiantes', 'Conexión a base de datos MySQL', 'Consultas y manipulación de datos (CRUD)', 'Aplicación desarrollada en Java']
-      },
-      {
-        title: 'Login & Registro (PHP)',
-        short: 'Login y registro con sesiones PHP',
-        desc: 'Sistema de login y registro de usuarios desarrollado en PHP con gestión de sesiones. Permite a los usuarios crear sus cuentas e iniciar sesión de forma segura, manteniendo su estado de autenticación durante la navegación.',
-        images: ['img/proyectos/login-php/login-php-1.jpg', 'img/proyectos/login-php/login-php-2.jpg', 'img/proyectos/login-php/login-php-3.jpg'],
-        tags: ['PHP', 'Sesiones', 'Autenticación'],
-        github: 'https://github.com/IgniaDragnel/Login_Registro',
-        highlights: ['Registro de nuevos usuarios', 'Inicio de sesión con sesiones PHP', 'Almacenamiento de credenciales', 'Interfaz sencilla y funcional']
-      },
-      {
-        title: 'E-commerce WordPress + React',
-        short: 'Tienda online con WordPress headless y React',
-        desc: 'E-commerce completo con WordPress como backend (headless CMS) y SPA React como frontend desacoplado. Tienda dinámica con filtros, carrito persistente, checkout con creación de pedidos, panel de cuenta de usuario y seguimiento de pedidos con mapa interactivo.',
-        images: ['img/proyectos/ecommers-wordpress/ecommers-wordpress-1.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-2.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-3.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-4.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-5.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-6.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-7.png'],
-        tags: ['PHP', 'React', 'Vite', 'API REST', 'WordPress', 'E-commerce'],
-        github: 'https://github.com/IgniaDragnel/Ecommers_Worpress',
-        highlights: ['Tienda dinámica con filtros por categoría, ofertas y ordenamiento por precio', 'Carrito persistente con sincronización al backend', 'Checkout con creación de pedidos', 'Mi Cuenta: perfil editable, estadísticas y pedidos', 'Seguimiento de pedidos con mapa interactivo (Leaflet + OpenStreetMap)', 'Tema oscuro/claro e idioma ES/EN']
       }
     ],
     cont: {
@@ -498,6 +534,33 @@ export const i18n: Record<Lang, Translation> = {
     },
     projects: [
       {
+        title: 'VitaDomicilio — Home Medical Service',
+        short: 'Website for a home medical service',
+        desc: 'Website for a home medical service in Quito and the Valleys. It presents the catalog of medical services and specialties, the coverage area with an interactive map and a contact form. React 18 frontend with TypeScript and Tailwind CSS, Skeleton components for data loading and its own REST API in Node.js + Express.',
+        images: ['img/proyectos/vitadomicilio/vitadomicilio-1.png', 'img/proyectos/vitadomicilio/vitadomicilio-2.png', 'img/proyectos/vitadomicilio/vitadomicilio-3.png', 'img/proyectos/vitadomicilio/vitadomicilio-4.png', 'img/proyectos/vitadomicilio/vitadomicilio-5.png', 'img/proyectos/vitadomicilio/vitadomicilio-6.png', 'img/proyectos/vitadomicilio/vitadomicilio-7.png', 'img/proyectos/vitadomicilio/vitadomicilio-8.png'],
+        tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'API REST'],
+        github: '',
+        highlights: ['Catalog of medical services and specialties', 'Coverage area with an interactive map', 'Contact form to request home visits', 'Service detail pages and legal sections', 'Dark/light theme and ES/EN language', 'REST APIs in Node.js + Express with Skeleton loading components']
+      },
+      {
+        title: 'E-commerce WordPress + React',
+        short: 'Online store with headless WordPress and React',
+        desc: 'Complete e-commerce with WordPress as backend (headless CMS) and a decoupled React SPA as frontend. Dynamic store with filters, persistent cart, checkout with order creation, user account panel and order tracking with an interactive map.',
+        images: ['img/proyectos/ecommers-wordpress/ecommers-wordpress-1.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-2.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-3.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-4.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-5.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-6.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-7.png'],
+        tags: ['PHP', 'React', 'Vite', 'API REST', 'WordPress', 'E-commerce'],
+        github: 'https://github.com/IgniaDragnel/Ecommers_Worpress',
+        highlights: ['Dynamic store with category filters, deals and price sorting', 'Persistent cart synced with the backend', 'Checkout with order creation', 'My Account: editable profile, stats and orders', 'Order tracking with interactive map (Leaflet + OpenStreetMap)', 'Dark/light theme and ES/EN language']
+      },
+      {
+        title: 'Image Recognition',
+        short: 'AI image classifier',
+        desc: 'Desktop application for image recognition and classification with artificial intelligence. It allows loading an image, running a neural network model to identify its content (cat, dog, bird) and showing the confidence percentage of each prediction. Includes options to train the model and save it.',
+        images: ['img/proyectos/reconocimiento-imagenes/reconocimiento-1.png', 'img/proyectos/reconocimiento-imagenes/reconocimiento-2.png', 'img/proyectos/reconocimiento-imagenes/reconocimiento-3.png'],
+        tags: ['Python', 'TensorFlow', 'Keras', 'CNN', 'AI', 'Desktop'],
+        github: '',
+        highlights: ['Image classification with a neural network (cat, dog, bird)', 'Confidence percentage per category', 'Image loading and real-time prediction', 'Model training and saving', 'Python desktop interface']
+      },
+      {
         title: 'Login & Registration MongoDB',
         short: 'Authentication with local API and MongoDB',
         desc: 'Complete login and user registration system developed in Dart, which consumes a local API to register and authenticate users storing the information in a MongoDB database.',
@@ -505,6 +568,24 @@ export const i18n: Record<Lang, Translation> = {
         tags: ['Dart', 'MongoDB', 'API REST', 'Authentication'],
         github: 'https://github.com/IgniaDragnel/Login_Registro_MongoDB',
         highlights: ['New user registration', 'Login with credential validation', 'Local REST API consumption', 'Data persistence in MongoDB', 'Clean and functional interface']
+      },
+      {
+        title: 'Student Registration',
+        short: 'Student CRUD with MySQL',
+        desc: 'Student registration system developed in Java with a MySQL database connection. It allows storing, querying and managing student information in an organized and reliable way.',
+        images: ['img/proyectos/registro-estudiantes/registro-estudiantes-1.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-2.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-3.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-4.jpg'],
+        tags: ['Java', 'MySQL', 'CRUD'],
+        github: 'https://github.com/IgniaDragnel/Registro_Estudiantes',
+        highlights: ['Student registration and management', 'MySQL database connection', 'Data queries and manipulation (CRUD)', 'Application developed in Java']
+      },
+      {
+        title: 'Login & Registration (PHP)',
+        short: 'Login and registration with PHP sessions',
+        desc: 'User login and registration system developed in PHP with session management. It allows users to create accounts and log in securely, keeping their authentication state during navigation.',
+        images: ['img/proyectos/login-php/login-php-1.jpg', 'img/proyectos/login-php/login-php-2.jpg', 'img/proyectos/login-php/login-php-3.jpg'],
+        tags: ['PHP', 'Sessions', 'Authentication'],
+        github: 'https://github.com/IgniaDragnel/Login_Registro',
+        highlights: ['New user registration', 'Login with PHP sessions', 'Credential storage', 'Simple and functional interface']
       },
       {
         title: 'User Roles (C#)',
@@ -532,33 +613,6 @@ export const i18n: Record<Lang, Translation> = {
         tags: ['PHP', 'HTML', 'Validations', 'Forms'],
         github: 'https://github.com/IgniaDragnel/Formulario_Registro',
         highlights: ['Required field validation', 'Format control (email, password)', 'Design with HTML and CSS', 'Validation logic in PHP']
-      },
-      {
-        title: 'Student Registration',
-        short: 'Student CRUD with MySQL',
-        desc: 'Student registration system developed in Java with a MySQL database connection. It allows storing, querying and managing student information in an organized and reliable way.',
-        images: ['img/proyectos/registro-estudiantes/registro-estudiantes-1.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-2.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-3.jpg', 'img/proyectos/registro-estudiantes/registro-estudiantes-4.jpg'],
-        tags: ['Java', 'MySQL', 'CRUD'],
-        github: 'https://github.com/IgniaDragnel/Registro_Estudiantes',
-        highlights: ['Student registration and management', 'MySQL database connection', 'Data queries and manipulation (CRUD)', 'Application developed in Java']
-      },
-      {
-        title: 'Login & Registration (PHP)',
-        short: 'Login and registration with PHP sessions',
-        desc: 'User login and registration system developed in PHP with session management. It allows users to create accounts and log in securely, keeping their authentication state during navigation.',
-        images: ['img/proyectos/login-php/login-php-1.jpg', 'img/proyectos/login-php/login-php-2.jpg', 'img/proyectos/login-php/login-php-3.jpg'],
-        tags: ['PHP', 'Sessions', 'Authentication'],
-        github: 'https://github.com/IgniaDragnel/Login_Registro',
-        highlights: ['New user registration', 'Login with PHP sessions', 'Credential storage', 'Simple and functional interface']
-      },
-      {
-        title: 'E-commerce WordPress + React',
-        short: 'Online store with headless WordPress and React',
-        desc: 'Complete e-commerce with WordPress as backend (headless CMS) and a decoupled React SPA as frontend. Dynamic store with filters, persistent cart, checkout with order creation, user account panel and order tracking with an interactive map.',
-        images: ['img/proyectos/ecommers-wordpress/ecommers-wordpress-1.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-2.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-3.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-4.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-5.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-6.png', 'img/proyectos/ecommers-wordpress/ecommers-wordpress-7.png'],
-        tags: ['PHP', 'React', 'Vite', 'API REST', 'WordPress', 'E-commerce'],
-        github: 'https://github.com/IgniaDragnel/Ecommers_Worpress',
-        highlights: ['Dynamic store with category filters, deals and price sorting', 'Persistent cart synced with the backend', 'Checkout with order creation', 'My Account: editable profile, stats and orders', 'Order tracking with interactive map (Leaflet + OpenStreetMap)', 'Dark/light theme and ES/EN language']
       }
     ],
     cont: {
