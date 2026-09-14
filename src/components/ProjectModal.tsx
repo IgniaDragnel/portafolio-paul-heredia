@@ -47,7 +47,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       style={{ background: 'var(--overlay)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="card relative w-full max-w-4xl overflow-hidden" style={{ maxHeight: '86vh' }}>
+      <div className={`card relative w-full max-w-4xl ${landscape ? 'overflow-y-auto' : 'overflow-hidden'}`} style={{ maxHeight: '86vh' }}>
         <button
           onClick={onClose}
           aria-label="Cerrar detalles"
@@ -56,7 +56,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           ✕
         </button>
 
-        <div className={landscape ? 'flex max-h-[86vh] flex-col' : 'flex flex-col md:flex-row'}>
+        <div className={landscape ? 'flex flex-col' : 'flex flex-col md:flex-row'}>
           {/* Media con galería */}
           <div className={landscape ? 'relative bg-[var(--surface-900)] p-2' : 'relative flex-1 bg-[var(--surface-900)] p-2 md:w-1/2'}>
             <img
@@ -66,7 +66,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               onLoad={(e) => setLandscape(e.currentTarget.naturalWidth > e.currentTarget.naturalHeight)}
               className={
                 landscape
-                  ? 'h-auto max-h-[42vh] w-full rounded-lg object-contain'
+                  ? 'h-auto w-full rounded-lg object-contain'
                   : 'h-auto max-h-[50vh] w-full rounded-lg object-contain md:max-h-[78vh]'
               }
             />
@@ -108,7 +108,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Detalles */}
-          <div className={landscape ? 'min-h-0 flex-1 overflow-y-auto p-7' : 'flex-1 overflow-y-auto p-7 md:w-1/2 md:max-h-[86vh]'}>
+          <div className={landscape ? 'p-7' : 'flex-1 overflow-y-auto p-7 md:w-1/2 md:max-h-[86vh]'}>
             <div className="mb-3 flex flex-wrap gap-1.5">
               {project.tags.map((tag) => {
                 const icon = tagIcon(tag);
