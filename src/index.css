@@ -69,6 +69,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Compensa el navbar fijo (72px) al saltar a una sección con #ancla */
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -97,11 +99,55 @@ body {
   background: var(--primary);
 }
 
+/* Foco visible accesible (WCAG 2.4.7) para navegación con teclado */
+:where(a, button, [role='button'], [tabindex]):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
 /* ---------- Utilidades personalizadas ---------- */
 .glass {
   background: var(--glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+}
+
+/* Ritmo vertical unificado: evita el doble padding (96 + 96 = 192px)
+   entre secciones y mantiene la misma cadencia en todos los tamaños. */
+.section {
+  padding-block: clamp(2.25rem, 3vw, 3rem);
+}
+
+/* Cabecera de sección con separación proporcional al nuevo ritmo */
+.section-head {
+  margin-bottom: clamp(1.75rem, 2.5vw, 2.25rem);
+  text-align: center;
+}
+
+.section-head > p:first-child {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--primary);
+}
+
+.section-head > h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.2vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.section-head > h2 + p {
+  margin-top: 0.75rem;
+  margin-inline: auto;
+  max-width: 34rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
 }
 
 .card {

@@ -29,11 +29,11 @@ export default function Experience() {
   const t = i18n[lang];
 
   return (
-    <section id="experiencia" className="py-24">
+    <section id="experiencia" className="section">
       <div className="mx-auto max-w-4xl px-4">
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-mono text-sm text-[var(--primary)]">{t.sec[1]}</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight">{t.exp.titulo}</h2>
+        <div className="section-head">
+          <p>{t.sec[1]}</p>
+          <h2>{t.exp.titulo}</h2>
         </div>
 
         <div className="relative border-l-2 border-[var(--border)] pl-8">

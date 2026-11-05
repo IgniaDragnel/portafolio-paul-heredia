@@ -67,12 +67,12 @@ export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   return (
-    <section id="proyectos" className="py-24">
+    <section id="proyectos" className="section">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-mono text-sm text-[var(--primary)]">{t.sec[3]}</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight">{t.proy.titulo}</h2>
-          <p className="mx-auto mt-3 max-w-lg text-[var(--text-muted)]">
+        <div className="section-head">
+          <p>{t.sec[3]}</p>
+          <h2>{t.proy.titulo}</h2>
+          <p>
             {t.proy.sub}{' '}
             <a href="https://github.com/IgniaDragnel?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-[var(--primary)] hover:underline">
               GitHub

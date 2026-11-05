@@ -15,12 +15,12 @@ export default function Skills() {
   const list = active === 'todo' ? t.skills : t.skills.filter((s) => s.cat === active);
 
   return (
-    <section id="habilidades" className="py-24">
+    <section id="habilidades" className="section">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mb-10 text-center">
-          <p className="mb-2 font-mono text-sm text-[var(--primary)]">{t.sec[2]}</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight">{t.hab.titulo}</h2>
-          <p className="mx-auto mt-3 max-w-lg text-[var(--text-muted)]">{t.hab.sub}</p>
+        <div className="section-head">
+          <p>{t.sec[2]}</p>
+          <h2>{t.hab.titulo}</h2>
+          <p>{t.hab.sub}</p>
         </div>
 
         {/* Pestañas */}

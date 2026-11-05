@@ -6,11 +6,11 @@ export default function About() {
   const t = i18n[lang];
 
   return (
-    <section id="sobre-mi" className="py-24">
+    <section id="sobre-mi" className="section">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-mono text-sm text-[var(--primary)]">{t.sec[0]}</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight">{t.sobre.titulo}</h2>
+        <div className="section-head">
+          <p>{t.sec[0]}</p>
+          <h2>{t.sobre.titulo}</h2>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">

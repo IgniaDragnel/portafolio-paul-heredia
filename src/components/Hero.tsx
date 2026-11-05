@@ -71,7 +71,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="inicio" className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16">
+    <section id="inicio" className="relative flex min-h-[80svh] items-center overflow-hidden pt-28 pb-12">
       <div className="hero-grid-bg absolute inset-0 pointer-events-none" aria-hidden="true" />
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-14 px-4 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Texto */}

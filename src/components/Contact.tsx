@@ -51,12 +51,12 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-24">
-      <div className="mx-auto max-w-5xl px-4">
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-mono text-sm text-[var(--primary)]">{t.sec[4]}</p>
-          <h2 className="font-display text-4xl font-bold tracking-tight">{t.cont.titulo}</h2>
-          <p className="mx-auto mt-3 max-w-xl text-[var(--text-muted)]">{t.cont.sub}</p>
+    <section id="contacto" className="section">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="section-head">
+          <p>{t.sec[4]}</p>
+          <h2>{t.cont.titulo}</h2>
+          <p>{t.cont.sub}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
@@ -69,7 +69,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-display text-base font-semibold">{c.title}</h3>
-                <p className="mt-1 break-all font-mono text-xs text-[var(--text-muted)]">{c.text}</p>
+                <p className="mt-1 break-all font-mono text-[10px] leading-relaxed text-[var(--text-muted)]">{c.text}</p>
               </div>
             ) : (
               <a
@@ -86,7 +86,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-display text-base font-semibold text-[var(--text)]">{c.title}</h3>
-                <p className="mt-1 break-all font-mono text-xs text-[var(--text-muted)]">{c.text}</p>
+                <p className="mt-1 break-all font-mono text-[10px] leading-relaxed text-[var(--text-muted)]">{c.text}</p>
               </a>
             )
           )}
